@@ -1,0 +1,150 @@
+n = +prompt("enter a number : ")
+res = ""
+for(i=2;i<n;i++)
+{
+    c=0
+    for(j=2;j<i;j++)
+    {
+        if(i%j == 0)
+        {
+            c++
+            break;
+        }
+    }
+    if(c==0)
+    {
+          rev= String(i).split("").reverse().join("")
+          if(i == rev)
+          {
+              res = res +i+ " "
+          }
+        }
+    }
+console.log("palindrome primes are : "+res)
+
+
+num=prompt("enter a number : ")
+max=num[0],min = num[0],minidx = 0,maxidx = 0
+for(i in num)
+{
+    if(num[i] < min)
+    {
+        min = num[i]
+        minidx = i
+    }
+    if(num[i]>max)
+    {
+        max = num[i]
+        maxidx = i
+    }
+}
+
+res = (minidx<maxidx)?"min is found first and max is found second":"max is found first and min is found second";
+console.log(res)
+
+
+a = prompt("enter a number to find sum of odd and even position diff : ")
+oddsum = 0,evensum = 0
+for(i=0;i<a.length;i++)
+{
+    if(i%2 == 0)
+    {
+        oddsum = oddsum + Number(a[i]);
+    }
+    else
+    {
+        evensum = evensum + Number(a[i])
+    }
+}
+
+console.log("the sum od even and odd position is : " +(evensum - oddsum))
+
+n = +prompt("enter a number : ")
+res = ""
+x=""
+for(i=2;i<n;i++)
+{
+    c=0
+    for(j=2;j<i;j++)
+    {
+        if(i%j == 0)
+        {
+            c++
+            break;
+        }
+    }
+    if(c==0)
+    {
+          x=String(i)
+          g = 0
+          if(x.length>=2)
+          {
+              for(k=0;k<x.length-1;k++)
+              {
+                  if(x[k+1]>x[k])
+                  {
+                      g++
+                  }
+              }
+          
+          if(x.length-1 ==g )
+          {
+              res += x + " ";
+          }
+    }
+}
+}
+
+console.log("primes in increasing order : "+res)
+
+
+
+o/p;
+
+
+node /tmp/eKVLl6wAbC.js
+enter a number : 150
+palindrome primes are : 2 3 5 7 11 101 131 
+enter a number : 123456789
+min is found first and max is found second
+enter a number to find sum of odd and even position diff : 123
+the sum od even and odd position is : -2
+enter a number : 150
+primes in increasing order : 13 17 19 23 29 37 47 59 67 79 89 127 137 139 149 
+
+
+
+
+
+today problem solving task:
+
+1.Write a program for palindromic primes
+i/p :   enter a number : 150
+o/p :   palindrome primes are : 2 3 5 7 11 101 131 
+
+2.Finding the minimum and maximum numbers and identifying which is found first and second
+
+i/p: enter a number : 123456789
+o/p: min is found first and max is found second
+
+3.write a program for Calculating the difference between the sum of even and odd positions
+
+i/p: enter a number to find sum of odd and even position diff : 123
+o/p :the sum of even and odd position is : -2
+
+4.Writing a program for prime numbers in increasing order
+i/p: enter a number : 150
+o/p : primes in increasing order : 13 17 19 23 29 37 47 59 67 79 89 127 137 139 149 
+
+
+
+
+
+
+Topic: Problem-Solving Class
+
+Detailed discussion on:
+- Writing a program for palindromic primes
+- Finding the minimum and maximum numbers and identifying which is found first and second
+- Calculating the difference between the sum of even and odd positions
+- Writing a program for prime numbers in increasing order
